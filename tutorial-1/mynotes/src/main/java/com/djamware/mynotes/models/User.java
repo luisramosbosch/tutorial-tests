@@ -1,18 +1,17 @@
 package com.djamware.mynotes.models;
 
+import java.util.HashSet;
 import java.util.Set;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.JoinTable;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "user")
@@ -109,6 +108,17 @@ public class User {
 	 */
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+
+	public Set<Role> getRoles() {
+		// TODO Auto-generated method stub
+		return roles;
+	}
+
+	public void setRoles(HashSet hashSet) {
+		// TODO Auto-generated method stub
+		this.roles=hashSet;
+		
 	}
     
     
