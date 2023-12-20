@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.djamware.mynotes.controllers;
+package com.djamware.mynotes.controller;
 
 import java.util.Date;
 
