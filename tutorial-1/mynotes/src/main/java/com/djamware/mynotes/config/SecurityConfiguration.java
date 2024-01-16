@@ -25,6 +25,9 @@ public class SecurityConfiguration {
     
 	@Autowired
 	private AuthEntryPointJwt unauthorizedHandler;
+	
+	 @Autowired
+	 UserDetailsServiceImpl userDetailsService;
     
     @Bean
     public PasswordEncoder passwordEncoder() {
